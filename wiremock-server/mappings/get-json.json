@@ -1,0 +1,16 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPattern": "(.*)\\.json"
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "./{{request.path}}",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "transformers": [
+      "response-template"
+    ]
+  }
+}
